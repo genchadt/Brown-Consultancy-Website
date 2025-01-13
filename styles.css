@@ -44,7 +44,7 @@ footer {
 }
 
 .logo {
-    width: clamp(150px, 25vw, 600px); /* Increased size */
+    width: clamp(150px, 15vw, 600px); /* Increased size */
     height: auto; /* Maintains aspect ratio */
     margin-right: 20px; /* Reduced space between logo and text */
     user-select: none;
