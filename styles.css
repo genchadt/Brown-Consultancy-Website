@@ -1,3 +1,7 @@
+:root {
+    color-scheme: dark;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -15,6 +19,12 @@ html, body {
     color: #FBF6EE;
     background-color: #2B3844;
     background-attachment: fixed;
+}
+
+section {
+    text-align: center;
+    position: relative;
+    padding-bottom: 80px;
 }
 
 h1 {
@@ -46,9 +56,9 @@ footer {
 }
 
 .logo {
-    width: clamp(150px, 15vw, 600px); /* Increased size */
-    height: auto; /* Maintains aspect ratio */
-    margin-right: 20px; /* Reduced space between logo and text */
+    width: clamp(150px, 15vw, 600px);
+    height: auto;
+    margin-right: 20px;
     user-select: none;
 }
 
@@ -57,9 +67,40 @@ footer {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    gap: 20px; /* Adds consistent spacing between logo and text */
+    gap: 20px;
 }
 
-section {
-    text-align: center;
+.contact-btn {
+    position: absolute;
+    top: 170px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 30px;
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #FBF6EE;
+    color: #2B3844;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Quicksand", sans-serif;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-btn:hover {
+    background-color: #e0dbd3;
+    transform: translateX(-50%) translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-btn:active {
+    transform: translateX(-50%) translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.contact-btn i {
+    font-size: 20px;
 }
