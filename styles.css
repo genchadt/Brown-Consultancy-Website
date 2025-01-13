@@ -31,6 +31,8 @@ h2 {
     font-size: 36pt;
     font-weight: normal;
     font-style: normal;
+    white-space: nowrap;
+    user-select: none;
 }
 
 footer {
