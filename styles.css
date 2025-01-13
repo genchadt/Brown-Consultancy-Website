@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100vh;
+    margin: auto;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    overflow-x: hidden;
+    color: #FBF6EE;
+    background-color: #2B3844;
+    background-attachment: fixed;
+}
+
+h1 {
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-size: 60pt;
+    font-weight: normal;
+    font-style: normal;
+}
+
+h2 {
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    font-size: 36pt;
+    font-weight: normal;
+    font-style: normal;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+.logo {
+    width: clamp(150px, 25vw, 600px); /* Increased size */
+    height: auto; /* Maintains aspect ratio */
+    margin-right: -100px; /* Reduced space between logo and text */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 20px; /* Adds consistent spacing between logo and text */
+}
+
+section {
+    text-align: center;
+}
