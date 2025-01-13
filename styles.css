@@ -23,6 +23,8 @@ h1 {
     font-size: 60pt;
     font-weight: normal;
     font-style: normal;
+    white-space: nowrap;
+    user-select: none;
 }
 
 h2 {
