@@ -153,3 +153,101 @@ footer {
     left: calc(var(--clock-size) * 0.4875);
     background-color: #ff4444;
 }
+
+/* Media queries */
+
+@media screen and (max-width: 1024px) {
+    h1 {
+        font-size: 48pt;
+    }
+    
+    h2 {
+        font-size: 28pt;
+    }
+    
+    .logo {
+        width: clamp(120px, 12vw, 400px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+        height: auto;
+        margin-top: 40px;
+    }
+    
+    h1 {
+        font-size: 36pt;
+        white-space: normal;
+        margin: 20px 0;
+    }
+    
+    h2 {
+        font-size: 24pt;
+        white-space: normal;
+        padding: 0 20px;
+    }
+    
+    .logo {
+        width: clamp(100px, 40vw, 200px);
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 28pt;
+    }
+    
+    h2 {
+        font-size: 18pt;
+    }
+    
+    .contact-btn {
+        padding: 12px 30px;
+        font-size: 16px;
+    }
+    
+    #clock-container {
+        position: static;
+        margin: 30px auto 0;
+        transform: none;
+    }
+    
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    :root {
+        --clock-size: 60px;
+    }
+    
+    section {
+        padding-bottom: 100px;
+    }
+}
+
+/* Utility classes */
+
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.fade-in {
+    animation: fadeIn 0.2s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
