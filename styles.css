@@ -179,19 +179,19 @@ footer {
     }
     
     h1 {
-        font-size: 36pt;
+        font-size: 24pt;
         white-space: normal;
         margin: 20px 0;
     }
     
     h2 {
-        font-size: 24pt;
+        font-size: 18pt;
         white-space: normal;
         padding: 0 20px;
     }
     
     .logo {
-        width: clamp(100px, 40vw, 200px);
+        width: clamp(80px, 30vw, 150px);
         margin-right: 0;
     }
 }
@@ -203,6 +203,10 @@ footer {
     
     h2 {
         font-size: 18pt;
+    }
+    
+    .logo {
+        width: clamp(60px, 25vw, 120px);
     }
     
     .contact-btn {
