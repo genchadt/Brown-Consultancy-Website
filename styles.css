@@ -1,5 +1,6 @@
 :root {
     color-scheme: dark;
+    --clock-size: 70px;
 }
 
 * {
@@ -70,13 +71,18 @@ footer {
     gap: 20px;
 }
 
-.contact-btn {
-    position: absolute;
-    top: 170px;
-    left: 50%;
-    transform: translateX(-50%);
+.button-clock-wrapper {
+    position: relative;
     margin-top: 30px;
-    padding: 15px 30px;
+}
+
+.button-container {
+    display: inline-block;
+    position: relative;
+}
+
+.contact-btn {
+    padding: 15px 40px;
     font-size: 18px;
     background-color: #FBF6EE;
     color: #2B3844;
@@ -85,22 +91,65 @@ footer {
     cursor: pointer;
     transition: all 0.3s ease;
     font-family: "Quicksand", sans-serif;
+    font-weight: 600;
     display: inline-flex;
     align-items: center;
     gap: 10px;
+    margin: 0 auto;
 }
 
 .contact-btn:hover {
     background-color: #e0dbd3;
-    transform: translateX(-50%) translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0px 10px rgba(251, 246, 238, 0.5);
 }
 
 .contact-btn:active {
-    transform: translateX(-50%) translateY(0);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);
 }
 
-.contact-btn i {
-    font-size: 20px;
+#clock-container {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    margin-left: 40px;
+}
+
+#clock {
+    width: var(--clock-size);
+    height: var(--clock-size);
+    border: calc(var(--clock-size) * 0.0375) solid #FBF6EE;
+    border-radius: 50%;
+    background-color: rgba(43, 56, 68, 0.8);
+    position: relative;
+    box-shadow: 0 0 5px rgba(251, 246, 238, 0.5);
+}
+
+#hour-hand, #minute-hand, #second-hand {
+    position: absolute;
+    background-color: #FBF6EE;
+    transform-origin: bottom center;
+    border-radius: 2px;
+}
+
+#hour-hand {
+    width: calc(var(--clock-size) * 0.05);
+    height: calc(var(--clock-size) * 0.3125);
+    top: calc(var(--clock-size) * 0.1875);
+    left: calc(var(--clock-size) * 0.475);
+}
+
+#minute-hand {
+    width: calc(var(--clock-size) * 0.0375);
+    height: calc(var(--clock-size) * 0.4);
+    top: calc(var(--clock-size) * 0.1);
+    left: calc(var(--clock-size) * 0.48125);
+}
+
+#second-hand {
+    width: calc(var(--clock-size) * 0.025);
+    height: calc(var(--clock-size) * 0.4375);
+    top: calc(var(--clock-size) * 0.0625);
+    left: calc(var(--clock-size) * 0.4875);
+    background-color: #ff4444;
 }
